@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+    background-color: #2C3E50;
+    ;
+    font-family: 'Finger Paint', cursive;
+    color: #ECF0F1;
+    /* Light text color */
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    font-size: 8vmin;
+    background-color: #3498DB;
+    /* Blue box color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.box:hover {
+    background-color: #2E86C1;
+    /* Darker blue on hover */
+    color: #FFF;
+    /* White text on hover */
+    transform: scale(1.1);
+    /* Scale up on hover */
+}
+
+#reset-btn,
+#new-btn {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #E74C3C;
+    /* Red button color */
+    color: #FFF;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+    background-color: #C0392B;
+    /* Darker red on hover */
+    transform: scale(1.1) rotate(-5deg);
+    /* Scale up and rotate on hover */
+}
+
+#msg {
+    margin-top: 2rem;
+    color: #F39C12; /* Orange message color */
+    font-size: 2rem;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInAndScale 1s ease-in-out forwards;
+}
+
+@keyframes fadeInAndScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+.heading {
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: #3498DB;
+    /* Blue heading color */
+}
+
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hide {
+    display: none;
+}
